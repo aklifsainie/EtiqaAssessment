@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EtiqaAssessment", "EtiqaAssessment\EtiqaAssessment.csproj", "{711AD693-F895-492F-B697-E961C3712DDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EtiqaAssessment.API", "EtiqaAssessment\EtiqaAssessment.API.csproj", "{711AD693-F895-492F-B697-E961C3712DDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etiqa.Application", "Etiqa.Application\Etiqa.Application.csproj", "{D1B25B54-85CD-48D0-87A1-F225004B8BA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Etiqa.Application", "Etiqa.Application\Etiqa.Application.csproj", "{D1B25B54-85CD-48D0-87A1-F225004B8BA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
