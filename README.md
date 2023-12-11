@@ -10,4 +10,7 @@ Welcome!!! This is a RESTful API developed in C# & ASP.NET Core 6 framework. It 
 * SQL Server database
 
 
-
+## N-Tier Architecture
+Consist of 2 projects :
+* EtiqaAssessment.API - Data Access layer
+* Etiqa.Application - Presentation layer
