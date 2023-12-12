@@ -65,5 +65,19 @@ namespace Etiqa.Application.Controllers
 
             
         }
+
+        public async Task<IActionResult> UserDetail(string username)
+        {
+            UserViewModel userDetail = new UserViewModel();
+            HttpResponseMessage response = _client.GetAsync(_client.BaseAddress + "/User/GetDetail?username=" + username).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                string data = response.Content.ReadAsStringAsync().Result;
+                userDetail = JsonConvert.DeserializeObject<UserViewModel>(data);
+            }
+
+            return View(userDetail);
+        }
     }
 }

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace EtiqaAssessment.Controllers
+namespace EtiqaAssessment.API.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
@@ -21,6 +21,19 @@ namespace EtiqaAssessment.Controllers
         public IActionResult Index()
         {
             return Ok(_dbContext.Users);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetDetail(string username)
+        {
+            // Error handling - check DB if username exist
+            var currentUser = _dbContext.Users.Find(username);
+            if (currentUser == null)
+            {
+                return NotFound("Username not found");
+            }
+
+            return Ok(currentUser); 
         }
 
         [HttpPost]
